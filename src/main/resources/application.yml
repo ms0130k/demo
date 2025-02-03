@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: demo
+
+greeting-name: Dakota
+greeting-coffee: ${greeting-name} likes coffee
+
+greeting:
+  name: test
+  coffee: test2
+  age: 20

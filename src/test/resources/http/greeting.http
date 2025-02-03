@@ -1,0 +1,8 @@
+###
+GET localhost:8080/greeting
+
+###
+GET localhost:8080/greeting/2
+
+###
+GET localhost:8080/greeting/coffee
