@@ -14,7 +14,7 @@ Content-Type: application/json
 }
 
 ###
-PUT localhost:8080/coffees/d6435e8c-348c-4359-94ee-d0cf92102c6
+PUT localhost:8080/coffees/2a0146ac-2e53-4630-848d-30beee962c5
 Content-Type: application/json
 
 {

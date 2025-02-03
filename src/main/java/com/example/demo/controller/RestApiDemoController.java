@@ -1,6 +1,9 @@
 package com.example.demo.controller;
 
 import com.example.demo.domain.Coffee;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -23,7 +26,7 @@ public class RestApiDemoController {
     }
 
     @GetMapping("/coffees")
-    public List<Coffee> getCoffees() {
+    public Iterable<Coffee> getCoffees() {
         return coffees;
     }
 
@@ -41,16 +44,16 @@ public class RestApiDemoController {
     }
 
     @PutMapping("/coffees/{id}")
-    public Coffee putCoffee(@PathVariable String id, @RequestBody Coffee coffee) {
+    public ResponseEntity<Coffee> putCoffee(@PathVariable String id, @RequestBody Coffee coffee) {
         Optional<Coffee> coffeeOptional = getCoffeeById(id);
         if (coffeeOptional.isPresent()) {
             Coffee existingCoffee = coffeeOptional.get();
             existingCoffee.setName(coffee.getName());
-            return existingCoffee;
+            return ResponseEntity.ok(existingCoffee);
         } else {
             coffee.setId(id);
             coffees.add(coffee);
-            return coffee;
+            return ResponseEntity.status(HttpStatus.CREATED).body(coffee);
         }
     }
 
