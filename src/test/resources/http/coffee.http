@@ -1,0 +1,25 @@
+###
+GET localhost:8080/coffees
+
+###
+GET http://localhost:8080/coffees/d6435e8c-348c-4359-94ee-d0cf92102c6
+
+###
+POST localhost:8080/coffees
+Content-Type: application/json
+
+{
+  "id": "d6435e8c-348c-4359-94ee-d0cf92102c6",
+  "name": "Espresso"
+}
+
+###
+PUT localhost:8080/coffees/d6435e8c-348c-4359-94ee-d0cf92102c6
+Content-Type: application/json
+
+{
+  "name": "changed coffee"
+}
+
+###
+DELETE localhost:8080/coffees/6e0df546-c275-4771-9f44-68d8efc5e5ea
