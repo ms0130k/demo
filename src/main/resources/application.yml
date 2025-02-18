@@ -1,11 +1,13 @@
+server:
+  port: 9090
+  servlet:
+    session:
+      cookie:
+        name: SAMPLE_JSESSIONID
 spring:
-  application:
-    name: demo
-
-greeting-name: Dakota
-greeting-coffee: ${greeting-name} likes coffee
-
-greeting:
-  name: test
-  coffee: test2
-  age: 20
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true

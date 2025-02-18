@@ -1,0 +1,11 @@
+@SESSION_ID = 8B84B68379FFFA56FAD6C8F49914A9C4
+@COOKIE = SAMPLE_JSESSIONID={{SESSION_ID}}
+
+
+###
+GET http://localhost:9090/members
+Cookie: {{COOKIE}}
+
+###
+GET http://localhost:9090/members/1
+Cookie: {{COOKIE}}

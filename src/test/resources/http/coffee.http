@@ -1,25 +1,28 @@
 ###
-GET localhost:8080/coffees
+GET localhost:9090/coffees
 
 ###
-GET http://localhost:8080/coffees/1e79177f-5fba-445a-a5e4-1bae47e0e060
+GET http://localhost:9090/coffees/1
 
 ###
-POST localhost:8080/coffees
+POST localhost:9090/coffees
 Content-Type: application/json
 
 {
-  "id": "d6435e8c-348c-4359-94ee-d0cf92102c6",
-  "name": "Espresso"
+  "id": "4",
+  "name": "new Espresso",
+  "price": 2500
 }
 
 ###
-PUT localhost:8080/coffees/baed2220-125b-4902-b713-80e2404f291
+PUT localhost:9090/coffees/6
 Content-Type: application/json
 
 {
-  "name": "new right Espresso"
+  "id": "6",
+  "name": "new right Espresso",
+  "price": 2500
 }
 
 ###
-DELETE localhost:8080/coffees/d6435e8c-348c-4359-94ee-d0cf92102c
+DELETE localhost:9090/coffees/1
